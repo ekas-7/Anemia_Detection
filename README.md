@@ -1,4 +1,4 @@
-# 🔬 Anemia Detection System with RAG + Ollama Vision AI
+# Anemia Detection System with RAG + Ollama Vision AI
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -6,17 +6,17 @@
 
 A state-of-the-art **Retrieval-Augmented Generation (RAG)** system for non-invasive anemia detection from conjunctiva images, combining CLIP embeddings, ChromaDB vector search, and Ollama vision models.
 
-## 🌟 Features
+## Features
 
-- 🎯 **RAG-Enhanced Detection**: Leverages similar historical cases for improved accuracy
-- 🤖 **AI Vision Analysis**: Uses Ollama's LLaVA model for intelligent classification
-- 📸 **Real-Time Camera Support**: Live detection with instant feedback
-- 🌐 **Web Interface**: User-friendly Streamlit dashboard
-- 🥧 **Raspberry Pi Compatible**: Optimized for edge deployment
-- 📊 **Comprehensive Reporting**: Detailed analysis with confidence scores
-- 🔍 **Vector Search**: CLIP embeddings with ChromaDB for semantic similarity
+- **RAG-Enhanced Detection**: Leverages similar historical cases for improved accuracy
+- **AI Vision Analysis**: Uses Ollama's LLaVA model for intelligent classification
+- **Real-Time Camera Support**: Live detection with instant feedback
+- **Web Interface**: User-friendly Streamlit dashboard
+- **Raspberry Pi Compatible**: Optimized for edge deployment
+- **Comprehensive Reporting**: Detailed analysis with confidence scores
+- **Vector Search**: CLIP embeddings with ChromaDB for semantic similarity
 
-## 📊 Dataset
+## Dataset
 
 Based on the **Eyes-defy-anemia** dataset:
 - **217 samples** (95 India + 122 Italy)
@@ -25,52 +25,25 @@ Based on the **Eyes-defy-anemia** dataset:
   - Male: <13.0 g/dL (anemic)
   - Female: <12.0 g/dL (anemic)
 
-## 🎯 System Architecture
+## System Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Input Image (Eye/Conjunctiva)             │
-└───────────────────────────┬─────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│           CLIP Model (clip-ViT-B-32)                         │
-│           Generate Image Embedding                           │
-└───────────────────────────┬─────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│           ChromaDB Vector Database Search                    │
-│           Find K Most Similar Cases                          │
-└───────────────────────────┬─────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│           Retrieve Similar Case Context:                     │
-│           • Hemoglobin levels                                │
-│           • Patient demographics                             │
-│           • Previous diagnoses                               │
-│           • Image characteristics                            │
-└───────────────────────────┬─────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│           Ollama Vision Model (LLaVA)                        │
-│           Input: Query Image + RAG Context                   │
-│           Analysis: Conjunctiva color, pallor, vessels       │
-└───────────────────────────┬─────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│           Classification Results:                            │
-│           • Anemic / Non-Anemic                              │
-│           • Confidence Score (0.0-1.0)                       │
-│           • Clinical Observations                            │
-│           • Reasoning & Justification                        │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    A[Input Image<br/>Eye/Conjunctiva] --> B[CLIP Model<br/>clip-ViT-B-32<br/>Generate Image Embedding]
+    B --> C[ChromaDB Vector Database Search<br/>Find K Most Similar Cases]
+    C --> D[Retrieve Similar Case Context<br/>• Hemoglobin levels<br/>• Patient demographics<br/>• Previous diagnoses<br/>• Image characteristics]
+    D --> E[Ollama Vision Model LLaVA<br/>Input: Query Image + RAG Context<br/>Analysis: Conjunctiva color, pallor, vessels]
+    E --> F[Classification Results<br/>• Anemic / Non-Anemic<br/>• Confidence Score 0.0-1.0<br/>• Clinical Observations<br/>• Reasoning & Justification]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff4e1
+    style C fill:#f0e1ff
+    style D fill:#e1ffe1
+    style E fill:#ffe1e1
+    style F fill:#fff9e1
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -127,7 +100,7 @@ print(result['anemia_classification'])  # 'anemic' or 'non-anemic'
 print(result['confidence_score'])       # 0.0 to 1.0
 ```
 
-## 📁 File Structure
+## File Structure
 
 ```
 Anemia_Detection/
@@ -140,7 +113,7 @@ Anemia_Detection/
 └── anemia_vectordb/           # ChromaDB vector database
 ```
 
-## 🔬 System Components
+## System Components
 
 ### 1. Image RAG System (`image_rag_system.py`)
 
@@ -150,10 +123,10 @@ Anemia_Detection/
 - **Multi-View Support**: Handles original, palpebral, forniceal, and combined conjunctiva images
 
 **Key Features:**
-- 🎯 **Smart Indexing**: Automatically processes all 217 dataset images
-- 🔍 **Similarity Search**: Find visually similar anemia cases
-- 📊 **Rich Metadata**: Includes hemoglobin levels, demographics, ground truth
-- ⚡ **Optimized Performance**: Efficient vector operations
+- **Smart Indexing**: Automatically processes all 217 dataset images
+- **Similarity Search**: Find visually similar anemia cases
+- **Rich Metadata**: Includes hemoglobin levels, demographics, ground truth
+- **Optimized Performance**: Efficient vector operations
 
 ### 2. Ollama Classifier (`ollama_classifier.py`)
 
@@ -180,7 +153,7 @@ Anemia_Detection/
 - **Result Tracking**: Automatic saving of classifications
 - **Performance Metrics**: Precision, recall, F1-score calculation
 
-## 📊 Dataset Statistics
+## Dataset Statistics
 
 The system has indexed **217 anemia images** with the following distribution:
 
@@ -192,10 +165,10 @@ The system has indexed **217 anemia images** with the following distribution:
 | Combined   | 149         | 64     | 85         |
 
 **Geographic Distribution:**
-- 🇮🇳 **India**: 95 samples (71.6% anemic)
-- 🇮🇹 **Italy**: 122 samples (18.9% anemic)
+- **India**: 95 samples (71.6% anemic)
+- **Italy**: 122 samples (18.9% anemic)
 
-## 🥧 Raspberry Pi Deployment
+## Raspberry Pi Deployment
 
 ### System Requirements
 
@@ -220,7 +193,7 @@ The system has indexed **217 anemia images** with the following distribution:
 | Vector Search | ~0.1s | ~0.05s |
 | Ollama Classification | ~10-30s | ~3-10s |
 
-## 🧪 Evaluation & Testing
+## Evaluation & Testing
 
 ### Run Evaluation
 
@@ -241,7 +214,7 @@ Based on initial testing:
 - **With RAG Enhancement**: +5-15% improvement
 - **Cross-Population**: Good generalization between India/Italy datasets
 
-## 🔧 Configuration
+## Configuration
 
 ### For Different Hardware
 
@@ -273,7 +246,7 @@ similar_cases = rag_system.search_similar_images(
 )
 ```
 
-## 🚀 Advanced Usage
+## Advanced Usage
 
 ### Batch Processing
 
@@ -297,7 +270,7 @@ similar_cases = rag_system.search_similar_images(
 result = classifier.classify_anemia_with_rag("test.jpg", similar_cases)
 ```
 
-## 🎥 Live Detection Modes
+## Live Detection Modes
 
 ### 1. Camera Detector (`live_camera_detector.py`)
 
@@ -340,13 +313,13 @@ streamlit run streamlit_app.py
 **Access**: Navigate to `http://localhost:8501` in your browser
 
 **Web Interface Features:**
-- 🎨 Modern, intuitive UI
-- 📸 Camera capture or file upload
-- 📊 Real-time confidence visualization
-- 🔍 View similar cases from database
-- 📈 Historical results tracking
-- 💾 Export results (JSON/CSV)
-- 📱 Mobile-responsive design
+- Modern, intuitive UI
+- Camera capture or file upload
+- Real-time confidence visualization
+- View similar cases from database
+- Historical results tracking
+- Export results (JSON/CSV)
+- Mobile-responsive design
 
 ### 3. Command Line (`launch_live_detector.py`)
 
@@ -361,7 +334,7 @@ Provides interactive menu for:
 - Configuration options
 - Live/batch mode selection
 
-## 🧪 Testing & Validation
+## Testing & Validation
 
 ### Dataset Analysis
 
@@ -405,7 +378,7 @@ print(f"F1-Score: {results['f1_score']:.2%}")
 - Misclassification analysis
 - Results saved to `results/evaluation_YYYYMMDD_HHMMSS.json`
 
-## 🔧 API Reference
+## API Reference
 
 ### AnemiaRAGPipeline
 
@@ -486,7 +459,7 @@ result = classifier.classify_anemia_with_rag(
 )
 ```
 
-## 📊 Performance Benchmarks
+## Performance Benchmarks
 
 ### Desktop (Intel i7, 16GB RAM, GTX 1660)
 
@@ -514,18 +487,18 @@ result = classifier.classify_anemia_with_rag(
 - Reduce `n_similar` to 3
 - Use `llava:7b` instead of larger models
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 ### Planned Features
 
-1. ✅ **Model Fine-tuning**: Custom-trained vision models for anemia
-2. 🔄 **Multi-modal RAG**: Combine image + patient history
-3. ⚡ **Real-time Streaming**: WebRTC for live video analysis
-4. 📱 **Mobile App**: Flutter/React Native interface
-5. 🎯 **Edge Optimization**: TensorFlow Lite for faster inference
-6. 🌐 **Multi-language**: Support for different languages
-7. 📊 **Analytics Dashboard**: Track population-level trends
-8. 🔐 **HIPAA Compliance**: Enhanced security for clinical use
+1. **Model Fine-tuning**: Custom-trained vision models for anemia
+2. **Multi-modal RAG**: Combine image + patient history
+3. **Real-time Streaming**: WebRTC for live video analysis
+4. **Mobile App**: Flutter/React Native interface
+5. **Edge Optimization**: TensorFlow Lite for faster inference
+6. **Multi-language**: Support for different languages
+7. **Analytics Dashboard**: Track population-level trends
+8. **HIPAA Compliance**: Enhanced security for clinical use
 
 ### Research Directions
 
@@ -534,7 +507,7 @@ result = classifier.classify_anemia_with_rag(
 - Multi-disease detection from conjunctiva images
 - Transfer learning from larger medical datasets
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -648,7 +621,7 @@ pipeline = AnemiaRAGPipeline("./dataset anemia")
 result = pipeline.classify_image("test.jpg")
 ```
 
-## � Privacy & Security
+## Privacy & Security
 
 ### Important Considerations
 
@@ -667,9 +640,9 @@ result = pipeline.classify_image("test.jpg")
 
 ### Disclaimer
 
-⚠️ **This system is for research and educational purposes only. It is NOT approved for clinical diagnosis. Always consult qualified healthcare professionals for medical advice.**
+**WARNING:** This system is for research and educational purposes only. It is NOT approved for clinical diagnosis. Always consult qualified healthcare professionals for medical advice.
 
-## 📊 Sample Results
+## Sample Results
 
 ### Example Output
 
@@ -701,7 +674,7 @@ result = pipeline.classify_image("test.jpg")
 }
 ```
 
-## 📚 References
+## References
 
 ### Scientific Background
 
@@ -723,7 +696,7 @@ result = pipeline.classify_image("test.jpg")
 - [CLIP](https://github.com/openai/CLIP) - Image embeddings
 - [Streamlit](https://streamlit.io/) - Web interface
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
@@ -734,7 +707,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - CLIP: MIT License
 - Dataset: Check original dataset license
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how to get started:
 
@@ -774,15 +747,15 @@ pip install pytest black flake8 mypy
 
 ### Areas for Contribution
 
-- 🐛 Bug fixes and error handling
-- ⚡ Performance optimizations
-- 📚 Documentation improvements
-- 🧪 Test coverage expansion
-- 🌐 Internationalization
-- 📱 Mobile interface development
-- 🎨 UI/UX enhancements
+- Bug fixes and error handling
+- Performance optimizations
+- Documentation improvements
+- Test coverage expansion
+- Internationalization
+- Mobile interface development
+- UI/UX enhancements
 
-## 👥 Authors & Acknowledgments
+## Authors & Acknowledgments
 
 ### Development Team
 
@@ -797,14 +770,14 @@ pip install pytest black flake8 mypy
 - OpenAI CLIP team
 - Open source community
 
-## 📧 Contact & Support
+## Contact & Support
 
 ### Getting Help
 
-- 📖 **Documentation**: See this README and code comments
-- 🐛 **Bug Reports**: Open an issue on GitHub
-- 💡 **Feature Requests**: Open an issue with [Feature] prefix
-- 💬 **Discussions**: Use GitHub Discussions
+- **Documentation**: See this README and code comments
+- **Bug Reports**: Open an issue on GitHub
+- **Feature Requests**: Open an issue with [Feature] prefix
+- **Discussions**: Use GitHub Discussions
 
 ### Community
 
@@ -812,15 +785,15 @@ pip install pytest black flake8 mypy
 - **Issues**: [Issues URL]
 - **Discussions**: [Discussions URL]
 
-## 🌟 Star History
+## Star History
 
-If you find this project useful, please consider giving it a ⭐ on GitHub!
+If you find this project useful, please consider giving it a star on GitHub!
 
 ---
 
 <div align="center">
 
-**Built with ❤️ for advancing accessible healthcare through AI**
+**Built with passion for advancing accessible healthcare through AI**
 
 Made possible by open-source technologies and community contributions
 

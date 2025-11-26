@@ -1,0 +1,1027 @@
+{
+  "timestamp": "2025-11-26T22:10:07.953668",
+  "sample_size": 10,
+  "successful_classifications": 9,
+  "metrics": {
+    "accuracy": 0.1111111111111111,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0,
+    "total_samples": 9,
+    "correct_predictions": 1,
+    "true_positives": 0,
+    "false_positives": 1,
+    "true_negatives": 1,
+    "false_negatives": 7
+  },
+  "detailed_results": [
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/33/20200213_154129.jpg",
+      "image_name": "20200213_154129.jpg",
+      "timestamp": "2025-11-26T22:05:53.328565",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 0.5,
+      "key_observations": [
+        "Pallor of the conjunctiva is not as pronounced compared to the anemic cases (Cases 1 and 5). The color intensity in this image appears closer to that seen in non-anemic case (Case 3) with a slight pinkness.",
+        "Color intensity of blood vessels is consistent with normal levels. There are no distinct darkening or reddening of the conjunctiva, which can be indicative of anemia.",
+        "Overall redness/pinkness of the inner eyelid is within normal limits and does not show signs of increased pigmentation."
+      ],
+      "conjunctiva_color": "The conjunctiva appears to have a mild pinkish hue, indicative of normal coloration.",
+      "comparison_notes": "This image shows a color intensity and overall appearance similar to that seen in the non-anemic cases (Cases 3 and 4). The lack of prominent pallor and abnormal coloration of the conjunctiva points towards this being a non-anemic case.",
+      "reasoning": "Based on the observations made, it is unlikely that this patient is anemic. This conclusion is supported by the comparison with similar cases where there are clear signs of anemia (Cases 1 and 5) and non-anemic cases (Case 3). The normal appearance of the conjunctiva in this image suggests that this patient's hemoglobin level is likely within normal limits.",
+      "similar_case_influence": "The similar cases were used as a reference to distinguish anemia from non-anemia based on common signs observed in medical images. The color intensity of the conjunctiva, overall appearance, and absence of prominent pallor are indicators that this case is non-anemic.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 0.5,\n    \"key_observations\": [\n        \"Pallor of the conjunctiva is not as pronounced compared to the anemic cases (Cases 1 and 5). The color intensity in this image appears closer to that seen in non-anemic case (Case 3) with a slight pinkness.\",\n        \"Color intensity of blood vessels is consistent with normal levels. There are no distinct darkening or reddening of the conjunctiva, which can be indicative of anemia.\",\n        \"Overall redness/pinkness of the inner eyelid is within normal limits and does not show signs of increased pigmentation.\"\n    ],\n    \"conjunctiva_color\": \"The conjunctiva appears to have a mild pinkish hue, indicative of normal coloration.\",\n    \"comparison_notes\": \"This image shows a color intensity and overall appearance similar to that seen in the non-anemic cases (Cases 3 and 4). The lack of prominent pallor and abnormal coloration of the conjunctiva points towards this being a non-anemic case.\",\n    \"reasoning\": \"Based on the observations made, it is unlikely that this patient is anemic. This conclusion is supported by the comparison with similar cases where there are clear signs of anemia (Cases 1 and 5) and non-anemic cases (Case 3). The normal appearance of the conjunctiva in this image suggests that this patient's hemoglobin level is likely within normal limits.\",\n    \"similar_case_influence\": \"The similar cases were used as a reference to distinguish anemia from non-anemia based on common signs observed in medical images. The color intensity of the conjunctiva, overall appearance, and absence of prominent pallor are indicators that this case is non-anemic.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "age": 21.0,
+            "doc_id": "india_33_original",
+            "hgb": 11.3,
+            "anemic": true,
+            "gender": "M",
+            "image_type": "original",
+            "country": "India",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/33/20200213_154129.jpg",
+            "sample_id": "india_33"
+          },
+          "description": "Anemia image - India sample 33 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -3.4626235961914062,
+          "metadata": {
+            "gender": "F",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/80/20200224_180925.jpg",
+            "anemic": true,
+            "image_type": "original",
+            "sample_id": "india_80",
+            "country": "India",
+            "doc_id": "india_80_original",
+            "hgb": 10.5,
+            "age": 50.0
+          },
+          "description": "Anemia image - India sample 80 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -3.5409369468688965,
+          "metadata": {
+            "gender": "M",
+            "country": "India",
+            "anemic": false,
+            "doc_id": "india_39_original",
+            "age": 32.0,
+            "hgb": 15.2,
+            "image_type": "original",
+            "sample_id": "india_39",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/39/20200213_232040.jpg"
+          },
+          "description": "Anemia image - India sample 39 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -3.685270309448242,
+          "metadata": {
+            "hgb": 13.8,
+            "anemic": false,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/66/20200224_114700.jpg",
+            "gender": "M",
+            "sample_id": "india_66",
+            "country": "India",
+            "image_type": "original",
+            "age": 21.0,
+            "doc_id": "india_66_original"
+          },
+          "description": "Anemia image - India sample 66 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -3.871710777282715,
+          "metadata": {
+            "doc_id": "india_12_original",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/12/20200203_103722.jpg",
+            "hgb": 10.6,
+            "anemic": true,
+            "sample_id": "india_12",
+            "country": "India",
+            "image_type": "original",
+            "gender": "M",
+            "age": 75.0
+          },
+          "description": "Anemia image - India sample 12 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/45/20200216_224452.jpg",
+      "image_name": "20200216_224452.jpg",
+      "timestamp": "2025-11-26T22:06:22.608744",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 0.5,
+      "key_observations": [
+        "conjunctiva appears well-saturated with color, with no significant paleness visible"
+      ],
+      "conjunctiva_color": "normal, with a healthy saturation of colors without excessive redness or pallor",
+      "comparison_notes": [
+        "This case has conjunctival coloration that is similar to the non-anemic cases (Case 2 and Case 5), where no signs of anemia were evident."
+      ],
+      "reasoning": [
+        "The absence of pallor in the conjunctiva is a key indicator for determining if anemia is present. The image shows the conjunctiva appearing normal in color with no noticeable paleness.",
+        "While the patient's sclera is red, this can be due to various factors other than anemia, such as vasodilation or lighting conditions."
+      ],
+      "similar_case_influence": "The comparison with Case 1 shows a paler conjunctiva, which suggests that anemia may be present. However, in this image, there is no significant paleness of the conjunctiva to classify it as anemic.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 0.5,\n    \"key_observations\": [\"conjunctiva appears well-saturated with color, with no significant paleness visible\"],\n    \"conjunctiva_color\": \"normal, with a healthy saturation of colors without excessive redness or pallor\",\n    \"comparison_notes\": [\n        \"This case has conjunctival coloration that is similar to the non-anemic cases (Case 2 and Case 5), where no signs of anemia were evident.\"\n    ],\n    \"reasoning\": [\n        \"The absence of pallor in the conjunctiva is a key indicator for determining if anemia is present. The image shows the conjunctiva appearing normal in color with no noticeable paleness.\",\n        \"While the patient's sclera is red, this can be due to various factors other than anemia, such as vasodilation or lighting conditions.\"\n    ],\n    \"similar_case_influence\": \"The comparison with Case 1 shows a paler conjunctiva, which suggests that anemia may be present. However, in this image, there is no significant paleness of the conjunctiva to classify it as anemic.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "image_type": "original",
+            "gender": "F",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/45/20200216_224452.jpg",
+            "country": "India",
+            "anemic": true,
+            "hgb": 10.0,
+            "sample_id": "india_45",
+            "doc_id": "india_45_original",
+            "age": 27.0
+          },
+          "description": "Anemia image - India sample 45 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -3.7430505752563477,
+          "metadata": {
+            "country": "India",
+            "sample_id": "india_67",
+            "gender": "M",
+            "hgb": 14.0,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/67/20200224_115146.jpg",
+            "anemic": false,
+            "doc_id": "india_67_original",
+            "age": 20.0,
+            "image_type": "original"
+          },
+          "description": "Anemia image - India sample 67 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -3.7721071243286133,
+          "metadata": {
+            "hgb": 11.2,
+            "sample_id": "india_28",
+            "country": "India",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/28/20200213_150536.jpg",
+            "gender": "M",
+            "image_type": "original",
+            "age": 20.0,
+            "anemic": true,
+            "doc_id": "india_28_original"
+          },
+          "description": "Anemia image - India sample 28 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -5.179068565368652,
+          "metadata": {
+            "doc_id": "india_26_original",
+            "sample_id": "india_26",
+            "country": "India",
+            "age": 39.0,
+            "hgb": 7.6,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/26/20200213_120556.jpg",
+            "anemic": true,
+            "image_type": "original",
+            "gender": "F"
+          },
+          "description": "Anemia image - India sample 26 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -5.3856964111328125,
+          "metadata": {
+            "anemic": true,
+            "age": 46.0,
+            "doc_id": "italy_21_original",
+            "sample_id": "italy_21",
+            "image_type": "original",
+            "hgb": 9.82,
+            "gender": "F",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/21/21.jpg",
+            "country": "Italy"
+          },
+          "description": "Anemia image - Italy sample 21 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/26/20200213_120556.jpg",
+      "image_name": "20200213_120556.jpg",
+      "timestamp": "2025-11-26T22:06:45.172679",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 0.8,
+      "key_observations": [
+        "Pallor of the conjunctiva is not prominent compared to similar anemic cases.",
+        "Blood vessels' color intensity appears normal and not significantly more red than in non-anemic cases."
+      ],
+      "conjunctiva_color": "The inner eyelid shows a natural, healthy pinkness with no discernible abnormalities",
+      "comparison_notes": "This image has similar color intensity of blood vessels and conjunctival pallor to non-anemic cases (Case 3 and Case 5), suggesting that the eye in question is not showing signs of anemia.",
+      "reasoning": "The analysis takes into account that paleness of the conjunctiva, redness of the blood vessels, and overall color of the inner eyelid are common indicators for detecting anemia. In this image, none of these indicators align with the presence of anemia. The conjunctival pallor is normal, and the color intensity of the blood vessels does not show significant reddening.",
+      "similar_case_influence": "The decision to classify this case as non-anemic is influenced by the comparison with similar cases (Case 3 and Case 5), which show healthy conjunctival appearances without signs of anemia.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 0.8,\n    \"key_observations\": [\n        \"Pallor of the conjunctiva is not prominent compared to similar anemic cases.\",\n        \"Blood vessels' color intensity appears normal and not significantly more red than in non-anemic cases.\"\n    ],\n    \"conjunctiva_color\": \"The inner eyelid shows a natural, healthy pinkness with no discernible abnormalities\",\n    \"comparison_notes\": \"This image has similar color intensity of blood vessels and conjunctival pallor to non-anemic cases (Case 3 and Case 5), suggesting that the eye in question is not showing signs of anemia.\",\n    \"reasoning\": \"The analysis takes into account that paleness of the conjunctiva, redness of the blood vessels, and overall color of the inner eyelid are common indicators for detecting anemia. In this image, none of these indicators align with the presence of anemia. The conjunctival pallor is normal, and the color intensity of the blood vessels does not show significant reddening.\",\n    \"similar_case_influence\": \"The decision to classify this case as non-anemic is influenced by the comparison with similar cases (Case 3 and Case 5), which show healthy conjunctival appearances without signs of anemia.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "anemic": true,
+            "sample_id": "india_26",
+            "country": "India",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/26/20200213_120556.jpg",
+            "hgb": 7.6,
+            "gender": "F",
+            "doc_id": "india_26_original",
+            "age": 39.0,
+            "image_type": "original"
+          },
+          "description": "Anemia image - India sample 26 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -4.202497482299805,
+          "metadata": {
+            "age": 27.0,
+            "gender": "F",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/7/20200124_202058.jpg",
+            "sample_id": "india_7",
+            "image_type": "original",
+            "anemic": true,
+            "hgb": 9.2,
+            "country": "India",
+            "doc_id": "india_7_original"
+          },
+          "description": "Anemia image - India sample 7 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -4.33504056930542,
+          "metadata": {
+            "image_type": "original",
+            "age": 20.0,
+            "gender": "M",
+            "doc_id": "india_67_original",
+            "sample_id": "india_67",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/67/20200224_115146.jpg",
+            "anemic": false,
+            "country": "India",
+            "hgb": 14.0
+          },
+          "description": "Anemia image - India sample 67 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -4.6402387619018555,
+          "metadata": {
+            "gender": "F",
+            "hgb": 10.8,
+            "sample_id": "india_61",
+            "doc_id": "india_61_original",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/61/20200223_185602.jpg",
+            "age": 32.0,
+            "image_type": "original",
+            "country": "India",
+            "anemic": true
+          },
+          "description": "Anemia image - India sample 61 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -4.737881660461426,
+          "metadata": {
+            "sample_id": "india_78",
+            "doc_id": "india_78_original",
+            "age": 40.0,
+            "anemic": true,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/78/20200224_153146.jpg",
+            "country": "India",
+            "image_type": "original",
+            "hgb": 10.3,
+            "gender": "F"
+          },
+          "description": "Anemia image - India sample 78 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/63/20200223_191233.jpg",
+      "image_name": "20200223_191233.jpg",
+      "timestamp": "2025-11-26T22:07:09.280788",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 1.0,
+      "key_observations": [
+        "The conjunctiva is of a healthy color without significant pallor compared to similar cases.",
+        "Blood vessels appear normal in intensity and are not significantly dilated or congested."
+      ],
+      "conjunctiva_color": "The conjunctiva appears pink with no notable paleness",
+      "comparison_notes": "This case's conjunctiva color is more consistent with the non-anemic cases (Case 3 and Case 4) rather than anemic ones (Case 1 and Case 5). The overall redness of the inner eyelid is also less pronounced in comparison to the anemic cases.",
+      "reasoning": "Anemia typically causes conjunctival pallor, which is a lack of blood circulation and oxygen supply to the eye. This results in a pale appearance of the conjunctiva. In this image, the conjunctiva appears pink without significant paleness or pallor. Additionally, the color intensity of the blood vessels does not show signs of hyperemia, which can also be indicative of anemia. These observations, along with the comparison to similar cases that have been shown to have anemic and non-anemic states, suggest that this patient's conjunctiva is consistent with a non-anemic condition.",
+      "similar_case_influence": "The comparison to similar cases was instrumental in making this assessment. Observing the difference in color intensity of the conjunctiva in anemic vs non-anemic cases allowed for a clear distinction between the two conditions.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 1.0,\n    \"key_observations\": [\"The conjunctiva is of a healthy color without significant pallor compared to similar cases.\",\n        \"Blood vessels appear normal in intensity and are not significantly dilated or congested.\"],\n    \"conjunctiva_color\": \"The conjunctiva appears pink with no notable paleness\",\n    \"comparison_notes\": \"This case's conjunctiva color is more consistent with the non-anemic cases (Case 3 and Case 4) rather than anemic ones (Case 1 and Case 5). The overall redness of the inner eyelid is also less pronounced in comparison to the anemic cases.\",\n    \"reasoning\": \"Anemia typically causes conjunctival pallor, which is a lack of blood circulation and oxygen supply to the eye. This results in a pale appearance of the conjunctiva. In this image, the conjunctiva appears pink without significant paleness or pallor. Additionally, the color intensity of the blood vessels does not show signs of hyperemia, which can also be indicative of anemia. These observations, along with the comparison to similar cases that have been shown to have anemic and non-anemic states, suggest that this patient's conjunctiva is consistent with a non-anemic condition.\",\n    \"similar_case_influence\": \"The comparison to similar cases was instrumental in making this assessment. Observing the difference in color intensity of the conjunctiva in anemic vs non-anemic cases allowed for a clear distinction between the two conditions.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "age": 27.0,
+            "doc_id": "india_63_original",
+            "image_type": "original",
+            "country": "India",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/63/20200223_191233.jpg",
+            "hgb": 9.9,
+            "gender": "F",
+            "anemic": true,
+            "sample_id": "india_63"
+          },
+          "description": "Anemia image - India sample 63 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -2.9457836151123047,
+          "metadata": {
+            "gender": "F",
+            "age": 21.0,
+            "sample_id": "india_70",
+            "image_type": "original",
+            "country": "India",
+            "doc_id": "india_70_original",
+            "anemic": true,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/70/20200224_123714.jpg",
+            "hgb": 10.6
+          },
+          "description": "Anemia image - India sample 70 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -4.892077445983887,
+          "metadata": {
+            "gender": "F",
+            "image_type": "original",
+            "age": 23.0,
+            "anemic": false,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/24/20200212_080100.jpg",
+            "hgb": 13.4,
+            "sample_id": "india_24",
+            "doc_id": "india_24_original",
+            "country": "India"
+          },
+          "description": "Anemia image - India sample 24 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -5.028684616088867,
+          "metadata": {
+            "country": "India",
+            "sample_id": "india_89",
+            "gender": "M",
+            "age": 23.0,
+            "hgb": 13.7,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/89/20200302_224240.jpg",
+            "anemic": false,
+            "doc_id": "india_89_original",
+            "image_type": "original"
+          },
+          "description": "Anemia image - India sample 89 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -5.322389602661133,
+          "metadata": {
+            "gender": "M",
+            "hgb": 12.2,
+            "image_type": "original",
+            "doc_id": "india_1_original",
+            "country": "India",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/1/20200118_164733.jpg",
+            "anemic": true,
+            "age": 29.0,
+            "sample_id": "india_1"
+          },
+          "description": "Anemia image - India sample 1 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/69/20200224_120426.jpg",
+      "image_name": "20200224_120426.jpg",
+      "timestamp": "2025-11-26T22:07:36.496567",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "error": "Failed to parse JSON response",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 0.5,\n    \"key_observations\": [\n        \"Pallor of the conjunctiva appears normal compared to the similar cases.\",\n        \"Color intensity of blood vessels seems within normal range for this image.\"\n    ],\n    \"conjunctiva_color\": \"Normal\",\n    \"comparison_notes\": \"This case is most similar in appearance to non-anemic Case 5 with a Hemoglobin level of 14.2 g/dL.\",\n    \"reasoning\": \"The pallor (paleness) of the conjunctiva in this image is not as pronounced as that seen in anemic cases. The blood vessels are clearly visible but do not show the darkened hues typically associated with anemia. Additionally, there's no noticeable redness or pinkness on the inner eyelid, which can sometimes indicate anemia.\"\n    \"similar_case_influence\": \"The case most influencing the decision is Case 5, a non-anemic case with similar conjunctival appearance. The comparison of this image to other cases suggests that the presence of anemia is unlikely based on the visual cues provided by the conjunctiva.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "doc_id": "india_69_original",
+            "gender": "M",
+            "hgb": 17.1,
+            "age": 21.0,
+            "anemic": false,
+            "image_type": "original",
+            "sample_id": "india_69",
+            "country": "India",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/69/20200224_120426.jpg"
+          },
+          "description": "Anemia image - India sample 69 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -3.1572322845458984,
+          "metadata": {
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/40/20200214_121836.jpg",
+            "sample_id": "india_40",
+            "country": "India",
+            "anemic": true,
+            "hgb": 8.2,
+            "gender": "F",
+            "image_type": "original",
+            "age": 29.0,
+            "doc_id": "india_40_original"
+          },
+          "description": "Anemia image - India sample 40 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -3.504791259765625,
+          "metadata": {
+            "gender": "F",
+            "country": "India",
+            "sample_id": "india_49",
+            "anemic": true,
+            "hgb": 9.7,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/49/20200217_152107.jpg",
+            "image_type": "original",
+            "doc_id": "india_49_original",
+            "age": 41.0
+          },
+          "description": "Anemia image - India sample 49 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -4.119421005249023,
+          "metadata": {
+            "sample_id": "india_25",
+            "hgb": 9.2,
+            "image_type": "original",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/25/20200213_121216.jpg",
+            "anemic": true,
+            "country": "India",
+            "age": 30.0,
+            "gender": "F",
+            "doc_id": "india_25_original"
+          },
+          "description": "Anemia image - India sample 25 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -4.173259258270264,
+          "metadata": {
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/88/20200302_223503.jpg",
+            "gender": "M",
+            "sample_id": "india_88",
+            "country": "India",
+            "doc_id": "india_88_original",
+            "anemic": false,
+            "age": 23.0,
+            "image_type": "original",
+            "hgb": 14.2
+          },
+          "description": "Anemia image - India sample 88 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/27/27.jpg",
+      "image_name": "27.jpg",
+      "timestamp": "2025-11-26T22:07:59.284187",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 0.5,
+      "key_observations": [
+        "Paleness of the conjunctiva appears to be within normal range.",
+        "Color intensity of blood vessels is consistent with non-anemic cases.",
+        "Overall redness/pinkness of the inner eyelid is within the norm."
+      ],
+      "conjunctiva_color": "The color of the conjunctiva has a natural range of red, white, and light blue tones, which is typical for healthy individuals.",
+      "comparison_notes": [
+        "Comparing this image to Case 1, the patient's conjunctiva shows more reddish hues with less paleness, which aligns with a non-anemic state.",
+        "The color intensity of blood vessels in this image is closer to that seen in Case 2 and Case 5, both of which are non-anemic cases."
+      ],
+      "reasoning": "Based on the observations made above, the image does not show clear signs of anemia as evident from similar cases. The coloration of the conjunctiva, along with the appearance of blood vessels and the redness/pinkness of the inner eyelid, are all consistent with a healthy individual.",
+      "similar_case_influence": "The classification was influenced by the fact that the patient's conjunctiva color and paleness closely resemble non-anemic cases such as Case 2 and Case 5. These similarities in the image's features suggest that the patient is likely not experiencing anemia at the moment.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 0.5,\n    \"key_observations\": [\n        \"Paleness of the conjunctiva appears to be within normal range.\",\n        \"Color intensity of blood vessels is consistent with non-anemic cases.\",\n        \"Overall redness/pinkness of the inner eyelid is within the norm.\"\n    ],\n    \"conjunctiva_color\": \"The color of the conjunctiva has a natural range of red, white, and light blue tones, which is typical for healthy individuals.\",\n    \"comparison_notes\": [\n        \"Comparing this image to Case 1, the patient's conjunctiva shows more reddish hues with less paleness, which aligns with a non-anemic state.\",\n        \"The color intensity of blood vessels in this image is closer to that seen in Case 2 and Case 5, both of which are non-anemic cases.\"\n    ],\n    \"reasoning\": \"Based on the observations made above, the image does not show clear signs of anemia as evident from similar cases. The coloration of the conjunctiva, along with the appearance of blood vessels and the redness/pinkness of the inner eyelid, are all consistent with a healthy individual.\",\n    \"similar_case_influence\": \"The classification was influenced by the fact that the patient's conjunctiva color and paleness closely resemble non-anemic cases such as Case 2 and Case 5. These similarities in the image's features suggest that the patient is likely not experiencing anemia at the moment.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "age": 59.0,
+            "gender": "M",
+            "image_type": "original",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/27/27.jpg",
+            "doc_id": "italy_27_original",
+            "hgb": 9.35,
+            "country": "Italy",
+            "anemic": true,
+            "sample_id": "italy_27"
+          },
+          "description": "Anemia image - Italy sample 27 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -5.2531843185424805,
+          "metadata": {
+            "gender": "M",
+            "age": 21.0,
+            "hgb": 13.4,
+            "sample_id": "india_91",
+            "doc_id": "india_91_original",
+            "image_type": "original",
+            "anemic": false,
+            "country": "India",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/91/20200302_231050.jpg"
+          },
+          "description": "Anemia image - India sample 91 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -8.09068489074707,
+          "metadata": {
+            "sample_id": "italy_53",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/53/T_22_20190608_084856.jpg",
+            "doc_id": "italy_53_original",
+            "age": 43.0,
+            "country": "Italy",
+            "image_type": "original",
+            "hgb": 15.1,
+            "gender": "M",
+            "anemic": false
+          },
+          "description": "Anemia image - Italy sample 53 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -8.358124732971191,
+          "metadata": {
+            "anemic": false,
+            "country": "Italy",
+            "gender": "M",
+            "age": 33.0,
+            "doc_id": "italy_49_original",
+            "image_type": "original",
+            "sample_id": "italy_49",
+            "hgb": 15.1,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/49/T_18_20190608_081326.jpg"
+          },
+          "description": "Anemia image - Italy sample 49 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -8.392396926879883,
+          "metadata": {
+            "doc_id": "italy_111_original",
+            "hgb": 13.1,
+            "sample_id": "italy_111",
+            "gender": "M",
+            "age": 37.0,
+            "anemic": false,
+            "country": "Italy",
+            "image_type": "original",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/111/T_80_20190614_075052.jpg"
+          },
+          "description": "Anemia image - Italy sample 111 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/52/T_21_20190608_083544.jpg",
+      "image_name": "T_21_20190608_083544.jpg",
+      "timestamp": "2025-11-26T22:08:25.678020",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "anemic",
+      "confidence_score": 0.8,
+      "key_observations": [
+        "Pallor: The conjunctiva appears pale compared to the non-anemic cases.",
+        "Color intensity of blood vessels: There is a noticeable decrease in color saturation of the blood vessels, which suggests reduced oxygenation and may be indicative of anemia."
+      ],
+      "conjunctiva_color": "The conjunctiva has a reddish-pink hue with decreased color saturation.",
+      "comparison_notes": "This case has similarities to both Case 2 and Case 5, which are anemic status. The patient's age is closer to Case 2, but the degree of pallor and color saturation in the blood vessels is more severe than in Case 5.",
+      "reasoning": "The patient's conjunctiva exhibits signs of paleness and reduced color saturation of blood vessels. These findings align with what would be expected in an individual with anemia, as insufficient red blood cells can result in less oxygenation reaching the tissues, including the conjunctiva. The presence of these symptoms suggests that the patient may have anemia, although further testing would be required to confirm this diagnosis.",
+      "similar_case_influence": "The image most closely resembles Case 2, which is an anemic case. The pallor and color saturation in the blood vessels are more pronounced than in Case 5, which is also an anemic case but with a higher hemoglobin level. Considering these observations, the likelihood of this being an anemia case is high.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"anemic\",\n    \"confidence_score\": 0.8,\n    \"key_observations\": [\n        \"Pallor: The conjunctiva appears pale compared to the non-anemic cases.\",\n        \"Color intensity of blood vessels: There is a noticeable decrease in color saturation of the blood vessels, which suggests reduced oxygenation and may be indicative of anemia.\"\n    ],\n    \"conjunctiva_color\": \"The conjunctiva has a reddish-pink hue with decreased color saturation.\",\n    \"comparison_notes\": \"This case has similarities to both Case 2 and Case 5, which are anemic status. The patient's age is closer to Case 2, but the degree of pallor and color saturation in the blood vessels is more severe than in Case 5.\",\n    \"reasoning\": \"The patient's conjunctiva exhibits signs of paleness and reduced color saturation of blood vessels. These findings align with what would be expected in an individual with anemia, as insufficient red blood cells can result in less oxygenation reaching the tissues, including the conjunctiva. The presence of these symptoms suggests that the patient may have anemia, although further testing would be required to confirm this diagnosis.\",\n    \"similar_case_influence\": \"The image most closely resembles Case 2, which is an anemic case. The pallor and color saturation in the blood vessels are more pronounced than in Case 5, which is also an anemic case but with a higher hemoglobin level. Considering these observations, the likelihood of this being an anemia case is high.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "sample_id": "italy_52",
+            "image_type": "original",
+            "anemic": false,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/52/T_21_20190608_083544.jpg",
+            "gender": "F",
+            "hgb": 14.4,
+            "country": "Italy",
+            "age": 24.0,
+            "doc_id": "italy_52_original"
+          },
+          "description": "Anemia image - Italy sample 52 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -6.008050441741943,
+          "metadata": {
+            "age": 77.0,
+            "doc_id": "italy_2_original",
+            "hgb": 10.2,
+            "image_type": "original",
+            "country": "Italy",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/2/2.jpg",
+            "sample_id": "italy_2",
+            "anemic": true,
+            "gender": "F"
+          },
+          "description": "Anemia image - Italy sample 2 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -6.648553371429443,
+          "metadata": {
+            "image_type": "original",
+            "age": 28.0,
+            "hgb": 13.7,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/116/T_85_20190614_081338.jpg",
+            "anemic": false,
+            "doc_id": "italy_116_original",
+            "sample_id": "italy_116",
+            "gender": "M",
+            "country": "Italy"
+          },
+          "description": "Anemia image - Italy sample 116 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -6.8118181228637695,
+          "metadata": {
+            "doc_id": "italy_66_original",
+            "hgb": 15.9,
+            "age": 55.0,
+            "image_type": "original",
+            "country": "Italy",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/66/T_35_20190610_084118.jpg",
+            "anemic": false,
+            "sample_id": "italy_66",
+            "gender": "M"
+          },
+          "description": "Anemia image - Italy sample 66 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -6.849825859069824,
+          "metadata": {
+            "hgb": 11.7,
+            "sample_id": "italy_4",
+            "gender": "F",
+            "doc_id": "italy_4_original",
+            "anemic": true,
+            "age": 73.0,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/4/4.jpg",
+            "country": "Italy",
+            "image_type": "original"
+          },
+          "description": "Anemia image - Italy sample 4 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/5/5.jpg",
+      "image_name": "5.jpg",
+      "timestamp": "2025-11-26T22:08:53.167740",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 0.5,
+      "key_observations": [
+        "The conjunctiva appears pinkish with a slight hue of redness."
+      ],
+      "conjunctiva_color": "Normal to slightly pink tint in the conjunctiva",
+      "comparison_notes": "Comparing this image to the given similar cases, it is more closely resembling non-anemic cases in terms of the conjunctival color and overall redness. The color intensity of blood vessels seems normal without any prominent pallor or abnormalities.",
+      "reasoning": "Based on the observations made from the comparison with the similar cases, the conjunctiva in this image does not show any signs of anemia. The absence of significant paleness and the presence of a slightly pink hue are more indicative of normal or non-anemic conjunctival coloration.",
+      "similar_case_influence": "The influence of similar cases on the decision was limited due to the lack of severe pallor or abnormalities present in this image. The comparison with non-anemic cases provided a more accurate reflection of the current state.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 0.5,\n    \"key_observations\": [\n        \"The conjunctiva appears pinkish with a slight hue of redness.\"\n    ],\n    \"conjunctiva_color\": \"Normal to slightly pink tint in the conjunctiva\",\n    \"comparison_notes\": \"Comparing this image to the given similar cases, it is more closely resembling non-anemic cases in terms of the conjunctival color and overall redness. The color intensity of blood vessels seems normal without any prominent pallor or abnormalities.\",\n    \"reasoning\": \"Based on the observations made from the comparison with the similar cases, the conjunctiva in this image does not show any signs of anemia. The absence of significant paleness and the presence of a slightly pink hue are more indicative of normal or non-anemic conjunctival coloration.\",\n    \"similar_case_influence\": \"The influence of similar cases on the decision was limited due to the lack of severe pallor or abnormalities present in this image. The comparison with non-anemic cases provided a more accurate reflection of the current state.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "hgb": 11.6,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/5/5.jpg",
+            "country": "Italy",
+            "image_type": "original",
+            "anemic": true,
+            "gender": "F",
+            "sample_id": "italy_5",
+            "doc_id": "italy_5_original",
+            "age": 74.0
+          },
+          "description": "Anemia image - Italy sample 5 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -3.726252555847168,
+          "metadata": {
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/2/2.jpg",
+            "hgb": 10.2,
+            "doc_id": "italy_2_original",
+            "anemic": true,
+            "age": 77.0,
+            "image_type": "original",
+            "country": "Italy",
+            "gender": "F",
+            "sample_id": "italy_2"
+          },
+          "description": "Anemia image - Italy sample 2 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -3.930248260498047,
+          "metadata": {
+            "anemic": false,
+            "sample_id": "italy_86",
+            "hgb": 16.9,
+            "gender": "M",
+            "doc_id": "italy_86_original",
+            "image_type": "original",
+            "country": "Italy",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/86/T_55_20190612_082104.jpg",
+            "age": 48.0
+          },
+          "description": "Anemia image - Italy sample 86 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -4.948634147644043,
+          "metadata": {
+            "gender": "M",
+            "age": 55.0,
+            "country": "Italy",
+            "anemic": false,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/66/T_35_20190610_084118.jpg",
+            "sample_id": "italy_66",
+            "hgb": 15.9,
+            "image_type": "original",
+            "doc_id": "italy_66_original"
+          },
+          "description": "Anemia image - Italy sample 66 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -5.413496494293213,
+          "metadata": {
+            "age": 30.0,
+            "image_type": "original",
+            "anemic": false,
+            "hgb": 13.62,
+            "sample_id": "italy_20",
+            "country": "Italy",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/20/20.jpg",
+            "gender": "M",
+            "doc_id": "italy_20_original"
+          },
+          "description": "Anemia image - Italy sample 20 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/25/25.jpg",
+      "image_name": "25.jpg",
+      "timestamp": "2025-11-26T22:09:15.180654",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 0.84,
+      "key_observations": [
+        "The conjunctiva color appears normal with a consistent intensity of pinkness and blood vessel coloration.",
+        "There is no noticeable pallor or paleness in the conjunctiva compared to the similar cases shown."
+      ],
+      "conjunctiva_color": "The conjunctiva color is consistent throughout the image, with a balanced distribution of pink and blue-green hues.",
+      "comparison_notes": "This case has a higher redness/pinkness in the inner eyelid compared to Case 1 (Similarity: 1.00), which is anemic case. However, it also shows more consistent color intensity of blood vessels and a lack of pallor, which are indicative of non-anemia.",
+      "reasoning": "Based on the provided image, there are no clear signs of anemia such as conjunctival pallor or abnormal coloration. The conjunctiva appears to be in good health with normal pinkness and blood vessel color intensity. Although the redness/pinkness of the inner eyelid is higher than that seen in Case 1, it does not indicate anemia due to its consistency and lack of other indicators.",
+      "similar_case_influence": "Comparing this case to the anemic and non-anemic cases shown, it does not present any signs of anemia. The color intensity of blood vessels is consistent, there is no noticeable pallor in the conjunctiva, and the inner eyelid has a typical redness/pinkness without being excessively pale or showing other indicators of anemia.",
+      "raw_response": " ```json\n{\n    \"anemia_classification\": \"non-anemic\",\n    \"confidence_score\": 0.84,\n    \"key_observations\": [\"The conjunctiva color appears normal with a consistent intensity of pinkness and blood vessel coloration.\",\n        \"There is no noticeable pallor or paleness in the conjunctiva compared to the similar cases shown.\"],\n    \"conjunctiva_color\": \"The conjunctiva color is consistent throughout the image, with a balanced distribution of pink and blue-green hues.\",\n    \"comparison_notes\": \"This case has a higher redness/pinkness in the inner eyelid compared to Case 1 (Similarity: 1.00), which is anemic case. However, it also shows more consistent color intensity of blood vessels and a lack of pallor, which are indicative of non-anemia.\",\n    \"reasoning\": \"Based on the provided image, there are no clear signs of anemia such as conjunctival pallor or abnormal coloration. The conjunctiva appears to be in good health with normal pinkness and blood vessel color intensity. Although the redness/pinkness of the inner eyelid is higher than that seen in Case 1, it does not indicate anemia due to its consistency and lack of other indicators.\",\n    \"similar_case_influence\": \"Comparing this case to the anemic and non-anemic cases shown, it does not present any signs of anemia. The color intensity of blood vessels is consistent, there is no noticeable pallor in the conjunctiva, and the inner eyelid has a typical redness/pinkness without being excessively pale or showing other indicators of anemia.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "hgb": 8.7,
+            "age": 53.0,
+            "anemic": true,
+            "sample_id": "italy_25",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/25/25.jpg",
+            "country": "Italy",
+            "gender": "M",
+            "image_type": "original",
+            "doc_id": "italy_25_original"
+          },
+          "description": "Anemia image - Italy sample 25 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -7.893474578857422,
+          "metadata": {
+            "image_type": "original",
+            "age": 45.0,
+            "sample_id": "italy_104",
+            "country": "Italy",
+            "doc_id": "italy_104_original",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/104/T_73_20190613_084628.jpg",
+            "hgb": 16.5,
+            "gender": "M",
+            "anemic": false
+          },
+          "description": "Anemia image - Italy sample 104 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -8.270218849182129,
+          "metadata": {
+            "doc_id": "italy_67_original",
+            "age": 48.0,
+            "image_type": "original",
+            "hgb": 16.2,
+            "gender": "M",
+            "country": "Italy",
+            "anemic": false,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/67/T_36_20190610_084456.jpg",
+            "sample_id": "italy_67"
+          },
+          "description": "Anemia image - Italy sample 67 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -8.436020851135254,
+          "metadata": {
+            "country": "Italy",
+            "hgb": 13.0,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/107/T_76_20190613_093151.jpg",
+            "image_type": "original",
+            "gender": "F",
+            "age": 40.0,
+            "anemic": false,
+            "sample_id": "italy_107",
+            "doc_id": "italy_107_original"
+          },
+          "description": "Anemia image - Italy sample 107 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -8.518568992614746,
+          "metadata": {
+            "hgb": 15.0,
+            "country": "Italy",
+            "age": 56.0,
+            "anemic": false,
+            "sample_id": "italy_58",
+            "doc_id": "italy_58_original",
+            "gender": "M",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/58/T_27_20190608_100451.jpg",
+            "image_type": "original"
+          },
+          "description": "Anemia image - Italy sample 58 - original view",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/97/T_66_20190613_075959.jpg",
+      "image_name": "T_66_20190613_075959.jpg",
+      "timestamp": "2025-11-26T22:09:43.473406",
+      "use_rag": true,
+      "image_type": "original",
+      "similar_cases_count": 5,
+      "anemia_classification": "non-anemic",
+      "confidence_score": 1.0,
+      "key_observations": [
+        "The conjunctiva appears well-saturated with blood, which is consistent with non-anemic cases."
+      ],
+      "conjunctiva_color": "The conjunctiva has a normal redness/pinkness to it without any paleness.",
+      "comparison_notes": "In comparison to the anemic case (Case 4), this image shows more vivid coloration of the conjunctiva and blood vessels. The conjunctiva appears more saturated with blood, which is indicative of non-anemia.",
+      "reasoning": "Anemia is typically characterized by pale conjunctiva due to a lack of oxygen-carrying red blood cells. In this image, the conjunctiva appears well-saturated with red and pink coloration without any paleness, suggesting that there is an adequate number of red blood cells present in the bloodstream.",
+      "similar_case_influence": "In considering the similarity to the non-anemic cases (Cases 1, 3, 5), this image shows a color intensity and saturation level that aligns with those images. The presence of well-saturated conjunctiva without any paleness is consistent with a non-anemic state.",
+      "raw_response": " ```json\n{\n  \"anemia_classification\": \"non-anemic\",\n  \"confidence_score\": 1.0,\n  \"key_observations\": [\"The conjunctiva appears well-saturated with blood, which is consistent with non-anemic cases.\"],\n  \"conjunctiva_color\": \"The conjunctiva has a normal redness/pinkness to it without any paleness.\",\n  \"comparison_notes\": \"In comparison to the anemic case (Case 4), this image shows more vivid coloration of the conjunctiva and blood vessels. The conjunctiva appears more saturated with blood, which is indicative of non-anemia.\",\n  \"reasoning\": \"Anemia is typically characterized by pale conjunctiva due to a lack of oxygen-carrying red blood cells. In this image, the conjunctiva appears well-saturated with red and pink coloration without any paleness, suggesting that there is an adequate number of red blood cells present in the bloodstream.\",\n  \"similar_case_influence\": \"In considering the similarity to the non-anemic cases (Cases 1, 3, 5), this image shows a color intensity and saturation level that aligns with those images. The presence of well-saturated conjunctiva without any paleness is consistent with a non-anemic state.\"\n}\n``` ",
+      "rag_context": [
+        {
+          "similarity_score": 1.0,
+          "metadata": {
+            "anemic": false,
+            "age": 49.0,
+            "hgb": 15.1,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/97/T_66_20190613_075959.jpg",
+            "sample_id": "italy_97",
+            "doc_id": "italy_97_original",
+            "country": "Italy",
+            "gender": "M",
+            "image_type": "original"
+          },
+          "description": "Anemia image - Italy sample 97 - original view",
+          "rank": 1
+        },
+        {
+          "similarity_score": -3.5842790603637695,
+          "metadata": {
+            "country": "Italy",
+            "age": 63.0,
+            "hgb": 14.5,
+            "sample_id": "italy_100",
+            "image_type": "original",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/100/T_69_20190613_081445.jpg",
+            "doc_id": "italy_100_original",
+            "anemic": false,
+            "gender": "F"
+          },
+          "description": "Anemia image - Italy sample 100 - original view",
+          "rank": 2
+        },
+        {
+          "similarity_score": -5.1817097663879395,
+          "metadata": {
+            "doc_id": "italy_99_original",
+            "gender": "M",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/99/T_68_20190613_081143.jpg",
+            "age": 44.0,
+            "anemic": false,
+            "sample_id": "italy_99",
+            "country": "Italy",
+            "hgb": 15.5,
+            "image_type": "original"
+          },
+          "description": "Anemia image - Italy sample 99 - original view",
+          "rank": 3
+        },
+        {
+          "similarity_score": -5.547508239746094,
+          "metadata": {
+            "image_type": "original",
+            "sample_id": "italy_9",
+            "age": 61.0,
+            "doc_id": "italy_9_original",
+            "anemic": true,
+            "gender": "M",
+            "country": "Italy",
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/Italy/9/9.jpg",
+            "hgb": 9.8
+          },
+          "description": "Anemia image - Italy sample 9 - original view",
+          "rank": 4
+        },
+        {
+          "similarity_score": -6.553023338317871,
+          "metadata": {
+            "age": 63.0,
+            "country": "India",
+            "sample_id": "india_85",
+            "anemic": false,
+            "hgb": 14.5,
+            "image_path": "/Users/ekas/Desktop/Anemia_Detection/dataset anemia/India/85/20200229_205012.jpg",
+            "image_type": "original",
+            "doc_id": "india_85_original",
+            "gender": "M"
+          },
+          "description": "Anemia image - India sample 85 - original view",
+          "rank": 5
+        }
+      ]
+    }
+  ]
+}
